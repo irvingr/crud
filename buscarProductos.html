@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Buscar Producto</title>
+		<script type="text/javascript" src='librerias/jquery-1.4.2.min.js'></script>
+	</head>
+	<body>
+		<header>
+			<center><h2>Productos</h2></center>
+		</header>
+		<nav>
+			<hr>
+			<a href="registrarProductos.html">Registrar</a>
+			<a href="buscarProductos.html">Buscar</a>
+			<hr>
+		</nav>
+		<section>
+			<fieldset style="width:30%;">
+				<legend>Búsqueda Producto</legend>
+				<form action='' method='POST' name='buscarP' id="buscarP" target = '_self'>
+					<table>
+						<tr>
+							<label>Producto</label>
+						</tr>
+						<tr>
+							<td><input type="input" name="txtCrit" required></td>
+						</tr>
+						<tr>
+							<td align="right"><button type = "submit">Buscar</button></td>
+						</tr>
+					</table>
+				</form>
+			</fieldset>
+			<div id="ajax">
+				
+			</div>
+		</section>
+		<script type="text/javascript">
+			$(function (e) {
+				$('#buscarP').submit(function (e) {
+					e.preventDefault()
+					$('#ajax').load('buscarProductos2.php?' + $('#buscarP').serialize())
+				})
+			})
+		</script>
+	</body> 
+</html>

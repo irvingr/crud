@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Registrar Producto</title>
+	</head>
+	<body>
+		<header>
+			<center><h2>Productos</h2></center>
+		</header>
+		<nav>
+			<hr>
+			<a href="registrarProductos.html">Registrar</a>
+			<a href="buscarProductos.html">Buscar</a>
+			<hr>
+		</nav>
+		<section>
+			<fieldset style="width:30%;">
+				<legend>Registrar Producto</legend>
+				<form action='registrarProductos2.php' method='POST'>
+					<table>
+						<tr>
+							<td><label>Producto:</label></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="txtProducto" required></td>
+						</tr>
+						<tr>
+							<td align="right"><button name='btnGuardar'>Guardar</button></td>
+						</tr>
+					</table>
+				</form>
+			</fieldset>
+		</section>
+	</body> 
+</html>
